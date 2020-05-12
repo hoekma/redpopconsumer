@@ -2,8 +2,7 @@
   "version": "v1",
   "packages": {
     "@hoekma/redpop": {
-      "signature": "cfc7f10e252af05573dcf14613ebb6ce",
-      "file": true
+      "signature": "cfc7f10e252af05573dcf14613ebb6ce"
     }
   }
 }
