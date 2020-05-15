@@ -4,7 +4,8 @@
 
 1. Edit src/config.js to meet your requirements
 2. Edit src/consumer.js to meet your requirements
-3. run `npm start`
+3. If you don't have a running Redis 5.0 server, run `docker-compose up -d` to start a redis server. Docker must be installed and running of course.
+4. run `npm start`
 
 Lifecyle for the RedPop Consumer is the following:
 
