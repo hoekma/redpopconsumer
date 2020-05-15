@@ -23,11 +23,11 @@ Lifecyle for the RedPop Consumer is the following:
 
 ## RedPop Consumer Message/Event Processing
 
-1. Because RedPop is an event driven system, nothing happens until an external `event` happens. This takes place in the form of a `Publisher` putting a message into the the stream defined in `src/config.js`.
+1. Because RedPop is an event driven system, nothing happens until an external `event` happens. This takes place in the form of a `Publisher` putting a events into the the stream defined in `src/config.js`.
 
 2. When ProtoConsumer listens for events and the Redis server has unplayed event(s), the Redis server assigns a batch of events to the instance of ProtoConsumer. The size of the batch is limited by `config.consumer.batchSize` which can be tuned for performance in high-volume implementations.
 
-3. RedPop's Consumer will process each event in the batch one at a time. The next event hook available to the developer is `Consumer::processEvent()`. For each message in the batch, processEvent will receive a JSON object in the following format:
+3. RedPop's Consumer will process each event in the batch one at a time. The next event hook available to the developer is `Consumer::processEvent()`. For each event in the batch, processEvent will receive a JSON object in the following format:
 
 ```javascript
     { id: `redis message id`,
@@ -43,7 +43,7 @@ Lifecyle for the RedPop Consumer is the following:
 
 The full message processing lifecycle is:
 
-_MESSAGE BATCH RECEIVED_ => processMessage() => onBatchComplete() => onBatchesComplete()
+EVENT BATCH RECEIVED\_ => processEvent() => onBatchComplete() => onBatchesComplete()
 
 ## Conclustion
 
