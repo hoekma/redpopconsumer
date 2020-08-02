@@ -1,7 +1,7 @@
 {
   "name": "@hoekma/redpopconsumer",
-  "version": "1.0.3",
-  "description": "Prototype Subscriber for RedPop",
+  "version": "1.0.4",
+  "description": "Prototype Cosumer for RedPop",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon node src/index.js",
