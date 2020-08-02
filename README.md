@@ -62,10 +62,11 @@ This test will require at least two terminal windows. One will contain your subs
 I recommend you play with the consumer's `processEvent` method to see how you can act on the event that is passed in. Here are some ideas:
 
 1. See if you can make the consumer output the message instead of the message ID.
-2. Try increasing the number of eventspublished in the `publishTestEvent.js` file to 100,000. Start another consumer in a third terminal window and publish 100K events to see your consumer scale horizontally. Notice the small `'b'` in front of the message id. This is an indicator that the consumer has finished processing a batch, which means that the consumers are processing the messages as fast as the publisher is publishing them.
-3. Run your publishers at least 10 times to build up over 1 million events in the stream. Taking too long? Create more publisher windows to simulate horizontal load. Depending on your computer (primarily cores available to horizontally scale) this might take a number of minutes.
-4. After your subscribers finish processing. Launch 10 or more subscriber windows.
-5. In a publisher window, type `npm run replayTestEvents`. This will replay all of your events in the stream -- over a million events.
+2. Try increasing the number of events published in the `publishTestEvent.js` file to 100,000. Start another consumer in a third terminal window and publish 100K events to see your consumer scale horizontally. Notice the small `'b'` in front of the message id. This is an indicator that the consumer has finished processing a batch, which means that the consumers are processing the messages as fast as the publisher is publishing them.
+3. Run your publishers at least 10 times to build up over 1 million events in the stream. Taking too long? Create more publisher windows to simulate horizontal load.
+4. Depending on your computer (primarily cores available to horizontally scale) this might take a number of minutes. You can check in a new window by running `npm run getEventCount` to see how many events have been added to the stream.
+5. After your subscribers finish processing (or you run out of patience and ctl-c the publishers). Launch 10 or more subscriber windows. Here you are simulating your server environment scaling out servers to handle huge loads.s
+6. In a publisher window, type `npm run replayTestEvents`. This will replay all of your events in the stream -- over a million events. You will notice that replaying these messages takes a fraction of the time now that they are available for replay, which makes transaction-intensive operations like data science easy to iterate on.
 
 ## Conclusion
 
