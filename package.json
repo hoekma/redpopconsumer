@@ -1,16 +1,19 @@
 {
   "name": "@hoekma/redpopconsumer",
-  "version": "1.0.0",
-  "description": "Prototype Subscriber for RedPop",
+  "version": "1.0.6",
+  "description": "Prototype Cosumer for RedPop",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon node src/index.js",
-    "publishTestMessages": "node src/publishTestMessage"
+    "publishTestEvents": "node src/publishTestEvents",
+    "replayTestEvents": "node src/replayTestEvents",
+    "getEventCount": "node src/getEventCount"
   },
   "author": "HoekTek, LLC",
   "license": "MIT",
   "dependencies": {
-    "@hoekma/redpop": "0.0.2-alpha.6"
+    "@hoekma/redpop": "0.0.2-alpha.6",
+    "faker": "^4.1.0"
   },
   "bugs": {
     "url": "https://github.com/hoekma/redpopconsumer/issues"
@@ -19,5 +22,13 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hoekma/redpopconsumer.git"
-  }
+  },
+  "keywords": [
+    "redis",
+    "streams",
+    "esb",
+    "bus",
+    "event",
+    "message"
+  ]
 }
