@@ -7,6 +7,8 @@
 3. If you don't have a running Redis 5.0 server, run `docker-compose up -d` to start a redis server. Docker must be installed and running of course.
 4. run `npm start`
 
+##### See full documentation at https://www.github.com/hoekma/redpop
+
 Lifecyle for the RedPop Consumer is the following:
 
 ## RedPop Consumer startup:
