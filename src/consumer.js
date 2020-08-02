@@ -21,7 +21,8 @@ class ProtoTypeConsumer extends Consumer {
     process.stdout.write('b');
   }
   processEvent(event) {
-    console.log(event);
+    // Runs once for each event.  Put your business logic here.
+    console.log(event.id);
     return true;
   }
 }
