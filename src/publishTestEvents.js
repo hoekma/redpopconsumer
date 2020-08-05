@@ -3,10 +3,10 @@ const { Publisher } = require('@hoekma/redpop');
 const config = require('./config');
 const publisher = new Publisher(config);
 
-const eventsToPublish = 1000000;
+const eventsToPublish = 1;
 const messageToPublish = {
   string: faker.random.word(),
-  date: faker.random.date(),
+  date: faker.date.recent(),
   number: faker.random.number(),
   boolean: true,
   stringArray: [faker.random.word(), faker.random.word(), faker.random.word()],
