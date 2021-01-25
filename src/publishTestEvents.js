@@ -1,9 +1,9 @@
-const faker = require('faker');
-const { Publisher } = require('@hoekma/redpop');
-const config = require('./config');
+const faker = require("faker");
+const { Publisher } = require("@hoekma/redpop");
+const config = require("./config");
 const publisher = new Publisher(config);
 
-const eventsToPublish = 1;
+const eventsToPublish = 10;
 const messageToPublish = {
   string: faker.random.word(),
   date: faker.date.recent(),

@@ -1,16 +1,16 @@
-const { Consumer } = require('@hoekma/redpop');
+const { Consumer } = require("@hoekma/redpop");
 
 class ProtoTypeConsumer extends Consumer {
   init() {
     // Code in Init runs when the consumer first starts up.
-    console.info('Init was run');
+    console.info("Init was run");
   }
 
   onBatchesComplete() {
     // Runs after all batches are complete.  For example
     // stream receives 500 event and config.batchSize=50
     // this will run after 10 batches of events.
-    process.stdout.write('B');
+    process.stdout.write(".");
   }
 
   onBatchComplete() {
@@ -18,7 +18,7 @@ class ProtoTypeConsumer extends Consumer {
     // stream receives 500 events and config.batchSize=50
     // this will run after each batch of 50 events.
 
-    process.stdout.write('b');
+    process.stdout.write("+");
   }
   processEvent(event) {
     // Runs once for each event.  Put your business logic here.
