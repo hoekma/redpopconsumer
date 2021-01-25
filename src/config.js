@@ -1,15 +1,24 @@
 module.exports = {
   server: {
-    address: 'localhost',
-    port: 6379,
-    connectionType: 'standalone',
+    connectionType: "standalone",
+    connection: {
+      host: "localhost",
+      port: 6379,
+    },
+    connections: [
+      {
+        host: "localhost",
+        port: 7000,
+      },
+    ],
+    //password='defaultpass'
   },
   stream: {
-    name: 'protoStream',
+    name: "protoStream",
   },
   consumer: {
-    group: 'protoGroup',
-    name: 'protoGroup',
+    group: "protoGroup",
+    name: "protoGroup",
     waitTimeMs: 2000,
     batchSize: 50,
     pendingEventTimeoutMs: 10000,
