@@ -1,6 +1,6 @@
 module.exports = {
   server: {
-    connectionType: "cluster",
+    connectionType: "standalone",
     connection: {
       host: "localhost",
       port: 6379,
